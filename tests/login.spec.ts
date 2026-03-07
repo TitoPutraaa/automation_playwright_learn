@@ -18,7 +18,7 @@ test("LOGIN : Negative (wrong username)", async({page}) => {
   await expect(page.locator('#error')).toHaveText('Your username is invalid!')
 });
 
-test("LOGIN : Negative (wrong password)", async({page}) => {
+test("LOGIN : Negative (empty password)", async({page}) => {
   await page.goto('https://practicetestautomation.com/practice-test-login/')
   await page.fill('#username', 'student');
   await page.fill('#password', '');
